@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53562D2F2A696FC6004A0409 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 53562D2E2A696FC6004A0409 /* README.md */; };
 		F4AFE4D128F92AA8006639B1 /* FoodPinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFE4D028F92AA8006639B1 /* FoodPinApp.swift */; };
 		F4AFE4D328F92AA8006639B1 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFE4D228F92AA8006639B1 /* RestaurantListView.swift */; };
 		F4AFE4D528F92AAA006639B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AFE4D428F92AAA006639B1 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53562D2E2A696FC6004A0409 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F4AFE4CD28F92AA8006639B1 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AFE4D028F92AA8006639B1 /* FoodPinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinApp.swift; sourceTree = "<group>"; };
 		F4AFE4D228F92AA8006639B1 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 		F4AFE4C428F92AA8006639B1 = {
 			isa = PBXGroup;
 			children = (
+				53562D2E2A696FC6004A0409 /* README.md */,
 				F4AFE4CF28F92AA8006639B1 /* FoodPin */,
 				F4AFE4CE28F92AA8006639B1 /* Products */,
 			);
@@ -147,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53562D2F2A696FC6004A0409 /* README.md in Resources */,
 				F4AFE4D828F92AAA006639B1 /* Preview Assets.xcassets in Resources */,
 				F4AFE4D528F92AAA006639B1 /* Assets.xcassets in Resources */,
 			);
