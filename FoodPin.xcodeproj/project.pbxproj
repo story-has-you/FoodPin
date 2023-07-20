@@ -41,8 +41,8 @@
 		F4AFE4C428F92AA8006639B1 = {
 			isa = PBXGroup;
 			children = (
-				53562D2E2A696FC6004A0409 /* README.md */,
 				F4AFE4CF28F92AA8006639B1 /* FoodPin */,
+				53562D2E2A696FC6004A0409 /* README.md */,
 				F4AFE4CE28F92AA8006639B1 /* Products */,
 			);
 			sourceTree = "<group>";
