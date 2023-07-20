@@ -37,22 +37,25 @@ struct RestaurantListView: View {
         NavigationStack {
             List {
                 ForEach(restaurants.indices, id: \.self) { index in
-                    BasicTextImageRow(restaurant: $restaurants[index])
-                        .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
-                            Button {
+                    NavigationLink(destination: RestaurantDetailView(restaurant: restaurants[index])) {
+                        BasicTextImageRow(restaurant: $restaurants[index])
+                            .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
+                                Button {
+                                    
+                                } label: {
+                                    Image(systemName: "heart")
+                                }
+                                .tint(.green)
                                 
-                            } label: {
-                                Image(systemName: "heart")
-                            }
-                            .tint(.green)
-                            
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "square.and.arrow.up")
-                            }
-                            .tint(.orange)
-                        })
+                                Button {
+                                    
+                                } label: {
+                                    Image(systemName: "square.and.arrow.up")
+                                }
+                                .tint(.orange)
+                            })
+                    }
+                    
                 }
                 .onDelete(perform: { indexSet in
                     restaurants.remove(atOffsets: indexSet)
@@ -65,6 +68,8 @@ struct RestaurantListView: View {
             .navigationTitle("FoodPin")
             .navigationBarTitleDisplayMode(.automatic)
         }
+        // 坐上返回按钮默认蓝色，这里改成白色
+        .accentColor(.white)
         
     }
 }
