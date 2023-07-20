@@ -9,6 +9,10 @@ import SwiftUI
 
 struct RestaurantDetailView: View {
     
+    
+    // 关闭目前视图
+    @Environment(\.dismiss) var dismiss
+    
     var restaurant: Restaurant
     
     var body: some View {
@@ -37,6 +41,18 @@ struct RestaurantDetailView: View {
                     .foregroundColor(.white)
                 }
         })
+        // 隐藏原先的返回按钮
+        .navigationBarBackButtonHidden(true)
+        // 建立自己的返回按钮
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading, content: {
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    Text("\(Image(systemName: "chevron.left")) \(restaurant.name)")
+                })
+            })
+        }
         
         
     }
