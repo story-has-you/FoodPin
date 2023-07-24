@@ -16,32 +16,69 @@ struct RestaurantDetailView: View {
     var restaurant: Restaurant
     
     var body: some View {
-        ZStack(alignment: .top, content: {
-            // 背景图片
-            Image(restaurant.image)
-                .resizable()
-                .scaledToFill()
-                // frame 设置宽高 infinity 占满屏幕
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .ignoresSafeArea()
-            
-            Color.black
-                .frame(height: 100)
-                .opacity(0.8)
-                .cornerRadius(20)
-                .padding()
-                // overlay 覆盖Color的内容
-                .overlay {
-                    VStack(spacing: 5, content: {
-                        Text(restaurant.name)
-                        Text(restaurant.type)
+        ScrollView {
+            VStack(alignment: .leading) {
+                // 背景图片
+                Image(restaurant.image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 445)
+                    .overlay {
+                        // 上面的爱心
+                        VStack {
+                            Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                                .foregroundColor(restaurant.isFavorite ? .yellow : .white)
+                                .frame(minWidth: 0, maxWidth: .infinity,
+                                       minHeight: 0, maxHeight: .infinity,
+                                       alignment: .topTrailing)
+                                .padding()
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .padding(.top, 40)
+                        }
+                        
+                        
+                        // 加入餐厅和类型名称
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(restaurant.name)
+                                .font(.custom("Nunito-Regular", size: 35, relativeTo: .largeTitle))
+                                .bold()
+                            Text(restaurant.type)
+                                .font(.system(.headline, design: .rounded))
+                                .padding(.all, 5)
+                                .background(.black)
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity,
+                               minHeight: 0, maxHeight: .infinity,
+                               alignment: .bottomLeading)
+                        .foregroundColor(.white)
+                        .padding()
+                    }
+                // 加入餐厅介绍
+                Text(restaurant.description)
+                    .padding()
+                
+                // 地址和电话
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
+                        Text("ADDRESS")
+                            .font(.system(.headline, design: .rounded))
+                        
                         Text(restaurant.location)
-                    })
-                    // .font(.system(.headline, design: .rounded))
-                    .font(.custom("Nunito-Regular", size: 17))
-                    .foregroundColor(.white)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+                    VStack(alignment: .leading) {
+                        Text("PHONE")
+                            .font(.system(.headline, design: .rounded))
+                        Text(restaurant.phone)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 }
-        })
+                .padding(.horizontal)
+            }
+        }
         // 隐藏原先的返回按钮
         .navigationBarBackButtonHidden(true)
         // 建立自己的返回按钮
@@ -54,6 +91,7 @@ struct RestaurantDetailView: View {
                 })
             })
         }
+        .ignoresSafeArea()
         
         
     }

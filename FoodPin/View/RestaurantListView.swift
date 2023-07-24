@@ -46,7 +46,7 @@ struct RestaurantListView: View {
                         BasicTextImageRow(restaurant: $restaurants[index])
                             .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
                                 Button {
-                                    
+                                    restaurants[index].isFavorite.toggle()
                                 } label: {
                                     Image(systemName: "heart")
                                 }
