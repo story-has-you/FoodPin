@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53365D772A7562E90065198A /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53365D762A7562E90065198A /* ReviewView.swift */; };
 		53562D2F2A696FC6004A0409 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 53562D2E2A696FC6004A0409 /* README.md */; };
 		53562D312A697254004A0409 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53562D302A697254004A0409 /* RestaurantDetailView.swift */; };
 		5368C4022A6E54E60066FC5E /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5368C4002A6E54E60066FC5E /* Nunito-Bold.ttf */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53365D762A7562E90065198A /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		53562D2E2A696FC6004A0409 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53562D302A697254004A0409 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		5368C4002A6E54E60066FC5E /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				F4AFE4E428FC60B3006639B1 /* ActivityView.swift */,
 				53562D302A697254004A0409 /* RestaurantDetailView.swift */,
 				53B027DB2A750EC000D4CCFC /* MapView.swift */,
+				53365D762A7562E90065198A /* ReviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53365D772A7562E90065198A /* ReviewView.swift in Sources */,
 				53B027DC2A750EC000D4CCFC /* MapView.swift in Sources */,
 				F4AFE4D328F92AA8006639B1 /* RestaurantListView.swift in Sources */,
 				53562D312A697254004A0409 /* RestaurantDetailView.swift in Sources */,

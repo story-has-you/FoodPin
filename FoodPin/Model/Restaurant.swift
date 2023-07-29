@@ -29,4 +29,25 @@ struct Restaurant {
     init() {
         self.init(name: "", type: "", location: "", phone: "", description: "", image: "", isFavorite: false)
     }
+    
+    /**
+     CaseIterable, 可以迭代项目的接口
+     */
+    enum Rating: String, CaseIterable {
+        case awesome
+        case good
+        case okay
+        case bad
+        case terrible
+        
+        var image: String {
+            switch self {
+                case .awesome: return "love"
+                case .good: return "cool"
+                case .okay: return "happy"
+                case .bad: return "sad"
+                case .terrible: return "angry"
+            }
+        }
+    }
 }

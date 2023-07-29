@@ -9,11 +9,10 @@ import SwiftUI
 
 struct RestaurantDetailView: View {
     
-    
     // 关闭目前视图
     @Environment(\.dismiss) var dismiss
-    
     var restaurant: Restaurant
+    @State private var showReview = false
     
     var body: some View {
         ScrollView {
@@ -89,7 +88,22 @@ struct RestaurantDetailView: View {
                         .cornerRadius(20)
                         .padding()
                 }
-                
+             
+                // 加入评分按钮
+                Button {
+                    self.showReview.toggle()
+                } label: {
+                    Text("Rate it")
+                        .font(.system(.headline, design: .rounded))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                }
+                .tint(Color("NavigationBarTitle"))
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.roundedRectangle(radius: 25))
+                .controlSize(.large)
+                .padding(.horizontal)
+                .padding(.bottom, 20)
+
             }
         }
         // 隐藏原先的返回按钮
@@ -105,6 +119,12 @@ struct RestaurantDetailView: View {
             })
         }
         .ignoresSafeArea()
+        .overlay {
+            self.showReview ? ZStack {
+                ReviewView(isDisplayed: $showReview ,restaurant: restaurant)
+                    .navigationBarHidden(true)
+            } : nil
+        }
         
         
     }
