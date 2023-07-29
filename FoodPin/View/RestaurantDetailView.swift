@@ -77,6 +77,19 @@ struct RestaurantDetailView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.horizontal)
+                
+                // 地图显示
+                NavigationLink {
+                    MapView(location: restaurant.location)
+                        .edgesIgnoringSafeArea(.all)
+                } label: {
+                    MapView(location: restaurant.location)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 200)
+                        .cornerRadius(20)
+                        .padding()
+                }
+                
             }
         }
         // 隐藏原先的返回按钮
