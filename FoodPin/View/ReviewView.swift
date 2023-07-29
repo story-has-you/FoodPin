@@ -67,7 +67,8 @@ struct ReviewView: View {
                     .opacity(showRatings ? 1.0 : 0)
                     // 将评分按钮移出屏幕, 向右移动1000
                     .offset(x: showRatings ? 0 : 1000)
-                    .animation(.easeIn.delay(Double(Restaurant.Rating.allCases.firstIndex(of: rating)!) * 0.05), value: showRatings)
+                    // 移入动画效果
+                    .animation(.easeIn.delay(Double(Restaurant.Rating.allCases.firstIndex(of: rating)!) * 0.1), value: showRatings)
                 }
             }
         }
