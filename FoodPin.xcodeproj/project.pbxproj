@@ -15,6 +15,7 @@
 		53B027DA2A7509C200D4CCFC /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B027D92A7509C200D4CCFC /* UIColor+Ext.swift */; };
 		53B027DC2A750EC000D4CCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B027DB2A750EC000D4CCFC /* MapView.swift */; };
 		53E8CD512A77E98A00BB56E0 /* NewRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CD502A77E98A00BB56E0 /* NewRestaurantView.swift */; };
+		53E8CD542A77F2D800BB56E0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CD532A77F2D800BB56E0 /* ImagePicker.swift */; };
 		F4AFE4D128F92AA8006639B1 /* FoodPinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFE4D028F92AA8006639B1 /* FoodPinApp.swift */; };
 		F4AFE4D328F92AA8006639B1 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFE4D228F92AA8006639B1 /* RestaurantListView.swift */; };
 		F4AFE4D528F92AAA006639B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AFE4D428F92AAA006639B1 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		53B027D92A7509C200D4CCFC /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		53B027DB2A750EC000D4CCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		53E8CD502A77E98A00BB56E0 /* NewRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantView.swift; sourceTree = "<group>"; };
+		53E8CD532A77F2D800BB56E0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F4AFE4CD28F92AA8006639B1 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AFE4D028F92AA8006639B1 /* FoodPinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinApp.swift; sourceTree = "<group>"; };
 		F4AFE4D228F92AA8006639B1 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		53E8CD522A77F29800BB56E0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				53E8CD532A77F2D800BB56E0 /* ImagePicker.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		F4AFE4C428F92AA8006639B1 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 				5368C3FE2A6E54310066FC5E /* Resources */,
 				F4AFE4E328FBB86E006639B1 /* View */,
 				F4AFE4E228FBB859006639B1 /* Model */,
+				53E8CD522A77F29800BB56E0 /* Util */,
 				F4AFE4D028F92AA8006639B1 /* FoodPinApp.swift */,
 				F4AFE4D428F92AAA006639B1 /* Assets.xcassets */,
 				F4AFE4D628F92AAA006639B1 /* Preview Content */,
@@ -219,6 +230,7 @@
 				F4AFE4E528FC60B3006639B1 /* ActivityView.swift in Sources */,
 				53E8CD512A77E98A00BB56E0 /* NewRestaurantView.swift in Sources */,
 				53B027DA2A7509C200D4CCFC /* UIColor+Ext.swift in Sources */,
+				53E8CD542A77F2D800BB56E0 /* ImagePicker.swift in Sources */,
 				F4AFE4D128F92AA8006639B1 /* FoodPinApp.swift in Sources */,
 				F4AFE4E128FBB6C5006639B1 /* Restaurant.swift in Sources */,
 			);
