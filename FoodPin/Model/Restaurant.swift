@@ -4,31 +4,9 @@
 //
 //  Created by Simon Ng on 16/10/2022.
 //
+import Combine
 
-import Foundation
-
-struct Restaurant {
-    var name: String
-    var type: String
-    var location: String
-    var phone: String
-    var description: String
-    var image: String
-    var isFavorite: Bool
-    
-    init(name: String, type: String, location: String, phone: String, description: String, image: String, isFavorite: Bool = false) {
-        self.name = name
-        self.type = type
-        self.location = location
-        self.phone = phone
-        self.description = description
-        self.image = image
-        self.isFavorite = isFavorite
-    }
-    
-    init() {
-        self.init(name: "", type: "", location: "", phone: "", description: "", image: "", isFavorite: false)
-    }
+class Restaurant: ObservableObject {
     
     /**
      CaseIterable, 可以迭代项目的接口
@@ -50,4 +28,25 @@ struct Restaurant {
             }
         }
     }
+    
+    @Published var name: String
+    @Published var type: String
+    @Published var location: String
+    @Published var phone: String
+    @Published var description: String
+    @Published var image: String
+    @Published var isFavorite: Bool
+    @Published var rating: Rating?
+    
+    init(name: String, type: String, location: String, phone: String, description: String, image: String, isFavorite: Bool = false, rating: Rating? = nil) {
+        self.name = name
+        self.type = type
+        self.location = location
+        self.phone = phone
+        self.description = description
+        self.image = image
+        self.isFavorite = isFavorite
+        self.rating = rating
+    }
+    
 }

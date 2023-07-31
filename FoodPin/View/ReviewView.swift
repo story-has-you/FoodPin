@@ -69,6 +69,10 @@ struct ReviewView: View {
                     .offset(x: showRatings ? 0 : 1000)
                     // 移入动画效果
                     .animation(.easeIn.delay(Double(Restaurant.Rating.allCases.firstIndex(of: rating)!) * 0.1), value: showRatings)
+                    .onTapGesture {
+                        self.restaurant.rating = rating
+                        self.isDisplayed = false
+                    }
                 }
             }
         }
