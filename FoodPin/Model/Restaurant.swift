@@ -5,8 +5,22 @@
 //  Created by Simon Ng on 16/10/2022.
 //
 import Combine
+import CoreData
 
-class Restaurant: ObservableObject {
+public class Restaurant: NSManagedObject {
+    
+    @NSManaged var name: String
+    @NSManaged var type: String
+    @NSManaged var location: String
+    @NSManaged var phone: String
+    @NSManaged var summary: String
+    @NSManaged var image: Data
+    @NSManaged var isFavorite: Bool
+    @NSManaged var ratingText: String?
+    
+}
+
+extension Restaurant {
     
     /**
      CaseIterable, 可以迭代项目的接口
@@ -29,24 +43,18 @@ class Restaurant: ObservableObject {
         }
     }
     
-    @Published var name: String
-    @Published var type: String
-    @Published var location: String
-    @Published var phone: String
-    @Published var description: String
-    @Published var image: String
-    @Published var isFavorite: Bool
-    @Published var rating: Rating?
-    
-    init(name: String, type: String, location: String, phone: String, description: String, image: String, isFavorite: Bool = false, rating: Rating? = nil) {
-        self.name = name
-        self.type = type
-        self.location = location
-        self.phone = phone
-        self.description = description
-        self.image = image
-        self.isFavorite = isFavorite
-        self.rating = rating
+    var rating: Rating? {
+        get {
+            guard let ratingText = ratingText else {
+                return nil
+            }
+            
+            return Rating(rawValue: ratingText)
+        }
+        
+        set {
+            self.ratingText = newValue?.rawValue
+        }
     }
     
 }
