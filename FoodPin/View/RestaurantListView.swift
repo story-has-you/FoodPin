@@ -15,6 +15,7 @@ struct RestaurantListView: View {
     @Environment(\.managedObjectContext) var context
     
     @State private var showNewRestaurant = false
+    @State private var keywords = ""
     
     var body: some View {
         NavigationStack {
@@ -70,10 +71,16 @@ struct RestaurantListView: View {
             }
             
         }
+        // placement: .navigationBarDrawer(displayMode: .always) 固定搜索列，可以去除，默认.automaic
+        .searchable(text: $keywords, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search Restaurant...")
         // 坐上返回按钮默认蓝色
         .accentColor(.primary)
         .sheet(isPresented: $showNewRestaurant) {
             NewRestaurantView()
+        }
+        .onChange(of: keywords) { keywords in
+            let predicate =  keywords.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@", keywords)
+            restaurants.nsPredicate = predicate
         }
         
     }
