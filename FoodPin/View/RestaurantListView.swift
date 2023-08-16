@@ -16,6 +16,8 @@ struct RestaurantListView: View {
     
     @State private var showNewRestaurant = false
     @State private var keywords = ""
+    @State private var showWalkthrough = false
+    @AppStorage("hasViewedWalkthrough") private var hasViewedWalkthrough: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -78,9 +80,15 @@ struct RestaurantListView: View {
         .sheet(isPresented: $showNewRestaurant) {
             NewRestaurantView()
         }
+        .sheet(isPresented: $showWalkthrough) {
+            TutorialView()
+        }
         .onChange(of: keywords) { keywords in
             let predicate =  keywords.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@", keywords)
             restaurants.nsPredicate = predicate
+        }
+        .onAppear() {
+            showWalkthrough = !hasViewedWalkthrough
         }
         
     }
