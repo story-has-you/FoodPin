@@ -9,7 +9,9 @@ import SwiftUI
 
 struct RestaurantListView: View {
     
-    @FetchRequest(entity: Restaurant.entity(), sortDescriptors: [])
+    @FetchRequest(
+        entity: Restaurant.entity(),
+        sortDescriptors: [])
     var restaurants: FetchedResults<Restaurant>
     
     @Environment(\.managedObjectContext) var context
