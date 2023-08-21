@@ -6,6 +6,19 @@
 	<string>You need to grant the app access to your camera in order to take photos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>You need to grant the app access to your photo library so you can pick your favorite restaurant photo.</string>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.fangxi.NewRestaurant</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Create a new restaurant</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>New Restaurant</string>
+		</dict>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Nunito-Bold.ttf</string>
