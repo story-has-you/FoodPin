@@ -19,6 +19,9 @@
 		53AA9F3F2A8CFEFF005F4310 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA9F3E2A8CFEFF005F4310 /* MainView.swift */; };
 		53B027DA2A7509C200D4CCFC /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B027D92A7509C200D4CCFC /* UIColor+Ext.swift */; };
 		53B027DC2A750EC000D4CCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B027DB2A750EC000D4CCFC /* MapView.swift */; };
+		53DA65622A938BA200E8EC49 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA65612A938BA200E8EC49 /* AboutView.swift */; };
+		53DA65662A938E0C00E8EC49 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA65652A938E0C00E8EC49 /* WebView.swift */; };
+		53DA65682A93902600E8EC49 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA65672A93902600E8EC49 /* SafariView.swift */; };
 		53E8CD512A77E98A00BB56E0 /* NewRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CD502A77E98A00BB56E0 /* NewRestaurantView.swift */; };
 		53E8CD542A77F2D800BB56E0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8CD532A77F2D800BB56E0 /* ImagePicker.swift */; };
 		F4AFE4D128F92AA8006639B1 /* FoodPinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFE4D028F92AA8006639B1 /* FoodPinApp.swift */; };
@@ -43,6 +46,9 @@
 		53AA9F3E2A8CFEFF005F4310 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		53B027D92A7509C200D4CCFC /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		53B027DB2A750EC000D4CCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		53DA65612A938BA200E8EC49 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		53DA65652A938E0C00E8EC49 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		53DA65672A93902600E8EC49 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		53E8CD502A77E98A00BB56E0 /* NewRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantView.swift; sourceTree = "<group>"; };
 		53E8CD532A77F2D800BB56E0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F4AFE4CD28F92AA8006639B1 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +175,9 @@
 				53E8CD502A77E98A00BB56E0 /* NewRestaurantView.swift */,
 				53AA9F3C2A8CF422005F4310 /* TutorialView.swift */,
 				53AA9F3E2A8CFEFF005F4310 /* MainView.swift */,
+				53DA65612A938BA200E8EC49 /* AboutView.swift */,
+				53DA65652A938E0C00E8EC49 /* WebView.swift */,
+				53DA65672A93902600E8EC49 /* SafariView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DA65622A938BA200E8EC49 /* AboutView.swift in Sources */,
 				53AA9F3D2A8CF422005F4310 /* TutorialView.swift in Sources */,
 				532FBDC62A793E5B0069B053 /* RestaurantFormViewModel.swift in Sources */,
 				532FBDC02A792FAA0069B053 /* Persistence.swift in Sources */,
@@ -255,7 +265,9 @@
 				53562D312A697254004A0409 /* RestaurantDetailView.swift in Sources */,
 				F4AFE4E528FC60B3006639B1 /* ActivityView.swift in Sources */,
 				53E8CD512A77E98A00BB56E0 /* NewRestaurantView.swift in Sources */,
+				53DA65682A93902600E8EC49 /* SafariView.swift in Sources */,
 				53B027DA2A7509C200D4CCFC /* UIColor+Ext.swift in Sources */,
+				53DA65662A938E0C00E8EC49 /* WebView.swift in Sources */,
 				53E8CD542A77F2D800BB56E0 /* ImagePicker.swift in Sources */,
 				F4AFE4D128F92AA8006639B1 /* FoodPinApp.swift in Sources */,
 				F4AFE4E128FBB6C5006639B1 /* Restaurant.swift in Sources */,
